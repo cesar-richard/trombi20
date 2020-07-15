@@ -1,11 +1,12 @@
 import React from "react";
 import constants from "./constants";
+import { Container } from "semantic-ui-react";
 import MainCard from "./components/MainCard";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <Container fluid>
       <p>
         <a
           href={constants.formUrl}
@@ -19,7 +20,7 @@ function App() {
       <p>
         <MainCard name="Cesar" />
       </p>
-    </div>
+    </Container>
   );
 }
 
