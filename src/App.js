@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import constants from "./constants";
+import MainCard from "./components/MainCard";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <p>
         <a
+          href={constants.formUrl}
           className="App-link"
-          href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <code>DAT FORM</code>
         </a>
-      </header>
+      </p>
+      <p>
+        <MainCard name="Cesar" />
+      </p>
     </div>
   );
 }
