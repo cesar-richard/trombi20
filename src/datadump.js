@@ -383,8 +383,6 @@ export default [
     hobby: "Le sarcasme. Et dessiner. ",
     drink: "Le muscat pet', of course. ",
     devise: '"Ptdr, t\'es qui ?"',
-    photoLinked:
-      "https://drive.google.com/u/0/open?usp=forms_web&id=1ewhj309vAppreB59XbPKcHhElTYNK-5I",
     studiesfrom: "Je viens d'avoir le bac",
     home: "A côté de l'église St. Antoine ! ",
     studiesto: "TC",
