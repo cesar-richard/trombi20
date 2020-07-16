@@ -1,27 +1,24 @@
 import React from "react";
-import constants from "./constants";
-import { Container } from "semantic-ui-react";
+import { Container, CardGroup } from "semantic-ui-react";
 import MainCard from "./components/MainCard";
 import "./App.css";
+import datas from "./datadump";
 
 function App() {
-  return (
+  return datas.map(d => (
     <Container fluid>
-      <p>
-        <a
-          href={constants.formUrl}
-          className="App-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <code>DAT FORM</code>
-        </a>
-      </p>
-      <p>
-        <MainCard name="Cesar" />
-      </p>
+      <CardGroup fluid>
+        <MainCard
+          firstname={d.firstname}
+          lastname={d.lastname}
+          nickname={d.nickname}
+          photoLinked={d.photoLinked}
+          hometype={d.hometype}
+          devise={d.devise}
+        />
+      </CardGroup>
     </Container>
-  );
+  ));
 }
 
 export default App;
