@@ -52,7 +52,7 @@ export default function MainCard({
         ) : null}
         <Feed>
           <MetaInfo
-            alt="Home Type"
+            alt="Type de logement"
             icon="home"
             content={`${
               hometype === "Appart/Studio/Chambre ( bref , seul(e) )"
@@ -107,7 +107,7 @@ export default function MainCard({
             }}
           />
           <MetaInfo alt="Déguisement" icon="detective" content={disguise} />
-          <MetaInfo alt="Home Sweet Home" icon="map pin" content={home} />
+          <MetaInfo alt="Origine" icon="map pin" content={home} />
         </Feed>
       </Card.Content>
     </Card>
