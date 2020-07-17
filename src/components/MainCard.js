@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Feed, Image } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import MetaInfo from "./MetaInfo";
 
 export default function MainCard({
