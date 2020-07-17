@@ -10,7 +10,7 @@ function App() {
     <>
       <Container>
         <MainMenu />
-        <CardGroup itemsPerRow={3}>
+        <CardGroup stackable style={{}}>
           {datas.map(d => (
             <MainCard
               key={d.mail}

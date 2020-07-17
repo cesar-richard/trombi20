@@ -89,20 +89,19 @@ export default function MainCard({
             icon="group"
             content={clan}
             styleFunc={clan => {
-              console.log("Clan", clan);
               switch (clan) {
                 case "KB":
-                  return { color: "red" };
+                  return { color: "red", fontWeight: "bold" };
                 case "VB":
-                  return { color: "green" };
+                  return { color: "green", fontWeight: "bold" };
                 case "You²":
-                  return { color: "blue" };
+                  return { color: "blue", fontWeight: "bold" };
                 case "Tampi":
-                  return { color: "orange" };
+                  return { color: "orange", fontWeight: "bold" };
                 case "Licorne ? (Attention faut assumer)":
-                  return { color: "fuchsia" };
+                  return { color: "fuchsia", fontWeight: "bold" };
                 default:
-                  return {};
+                  return { fontWeight: "bold" };
               }
             }}
           />
