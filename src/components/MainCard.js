@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Feed, Image } from "semantic-ui-react";
 import MetaInfo from "./MetaInfo";
 
 export default function MainCard({
@@ -22,7 +22,16 @@ export default function MainCard({
 }) {
   return (
     <Card>
-      <div style={{ width: "auto", height: "300px" }}>
+      <Card.Header
+        style={{
+          width: "auto",
+          height: "300px",
+          alignItems: "center",
+          alignContent: "center",
+          alignSelf: "center",
+          verticalAlign: "middle"
+        }}
+      >
         <Image
           src={`${process.env.PUBLIC_URL}/img/${
             photoLinked ? photoLinked : "Dorade.png"
@@ -33,12 +42,12 @@ export default function MainCard({
           verticalAlign="middle"
           ui
         />
-      </div>
+      </Card.Header>
       <Card.Content>
         <Card.Header>{`${firstname} ${lastname}`}</Card.Header>
-        <Card.Meta>
-          <span className="date">{nickname}</span>
-        </Card.Meta>
+        <Card.Content>
+          <span className="date">A.K.A. {nickname}</span>
+        </Card.Content>
         <MetaInfo
           alt="Home Type"
           icon="home"
@@ -80,17 +89,15 @@ export default function MainCard({
             console.log("Clan", clan);
             switch (clan) {
               case "KB":
-                console.log("ok");
                 return { color: "red" };
               case "VB":
-                console.log("ok");
                 return { color: "green" };
               case "You²":
-                console.log("ok");
                 return { color: "blue" };
               case "Tampi":
-                console.log("ok");
                 return { color: "orange" };
+              case "Licorne ? (Attention faut assumer)":
+                return { color: "fuchsia" };
               default:
                 return {};
             }

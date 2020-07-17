@@ -10,7 +10,7 @@ function App() {
     <>
       <Container>
         <MainMenu />
-        <CardGroup itemsPerRow={4}>
+        <CardGroup itemsPerRow={3}>
           {datas.map(d => (
             <MainCard
               key={d.mail}
