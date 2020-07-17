@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, CardGroup, Grid } from "semantic-ui-react";
+import { Container, CardGroup } from "semantic-ui-react";
 import MainCard from "./components/MainCard";
 import MainMenu from "./components/MainMenu";
 import "./App.css";
