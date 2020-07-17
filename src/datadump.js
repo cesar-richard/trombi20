@@ -331,8 +331,7 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Bouton ",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename:
-      "1 rue nicolas auguste martel (je droppe mon adresse quelle malade)",
+    homename: "(*Flouté par césar*) (je droppe mon adresse quelle malade)",
     photoLinked: "IMG_20190702_232206_605 - Myrtille Cknockaert.jpg"
   },
   {
@@ -431,7 +430,7 @@ export default [
     studiesto: "TC",
     branch: "GI ( <3 )",
     clan: "Licorne ? (Attention faut assumer)",
-    disguise: "Une ?  ^^",
+    disguise: "Une banane ^^",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
     homename: "",
     photoLinked: "20200715_150731 - Pol Corty.jpg"
