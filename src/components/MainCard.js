@@ -24,7 +24,9 @@ export default function MainCard({
     <Card>
       <div style={{ width: "auto", height: "300px" }}>
         <Image
-          src={`/img/${photoLinked ? photoLinked : "Dorade.png"}`}
+          src={`${process.env.PUBLIC_URL}/img/${
+            photoLinked ? photoLinked : "Dorade.png"
+          }`}
           style={{ maxHeight: "100%", maxWidth: "100%" }}
           rounded
           centered

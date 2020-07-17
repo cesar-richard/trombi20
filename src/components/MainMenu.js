@@ -6,7 +6,7 @@ export default function MainMenu() {
   return (
     <Menu stackable>
       <Menu.Item>
-        <img alt="Trombi" src="/favicon.png" />
+        <img alt="Trombi" src={`${process.env.PUBLIC_URL}/favicon.png`} />
       </Menu.Item>
       <Menu.Item
         name="home"
