@@ -13,14 +13,16 @@ export default function MainMenu() {
         active={activeItem === "home"}
         onClick={handleItemClick}
       >
-        Home
+        Trombinoscope
       </Menu.Item>
       <Menu.Item
-        name="test"
-        active={activeItem === "test"}
-        onClick={handleItemClick}
+        name="form"
+        active={activeItem === "form"}
+        link
+        href="https://forms.gle/TReCpKNaa1e54MNc9"
+        target="_blank"
       >
-        Test
+        Remplir le formulaire
       </Menu.Item>
     </Menu>
   );
