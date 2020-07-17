@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Feed, Image } from "semantic-ui-react";
 import MetaInfo from "./MetaInfo";
 
 export default function MainCard({
@@ -45,66 +45,70 @@ export default function MainCard({
       </Card.Header>
       <Card.Content>
         <Card.Header>{`${firstname} ${lastname}`}</Card.Header>
-        <Card.Content>
-          <span className="date">A.K.A. {nickname}</span>
-        </Card.Content>
-        <MetaInfo
-          alt="Home Type"
-          icon="home"
-          content={`${
-            hometype === "Appart/Studio/Chambre ( bref , seul(e) )"
-              ? "Solo"
-              : hometype
-          }${
-            homename &&
-            !(
-              homename === "nop" ||
-              homename === "nope" ||
-              homename === "Nope" ||
-              homename === "Non." ||
-              homename === "Non"
-            )
-              ? ` (${homename})`
-              : ""
-          }`}
-        />
-        <MetaInfo alt="Devise" icon="comment" content={devise} />
-        <MetaInfo alt="Boisson préférée" icon="cocktail" content={drink} />
-        <MetaInfo
-          alt="Etudes précédentes"
-          icon="graduation"
-          content={studiesfrom}
-        />
-        <MetaInfo
-          alt="Niveau d'entrée à l'UTC"
-          icon="pencil"
-          content={studiesto}
-        />
-        <MetaInfo alt="Branche visée" icon="space shuttle" content={branch} />
-        <MetaInfo
-          alt="Clan"
-          icon="group"
-          content={clan}
-          styleFunc={clan => {
-            console.log("Clan", clan);
-            switch (clan) {
-              case "KB":
-                return { color: "red" };
-              case "VB":
-                return { color: "green" };
-              case "You²":
-                return { color: "blue" };
-              case "Tampi":
-                return { color: "orange" };
-              case "Licorne ? (Attention faut assumer)":
-                return { color: "fuchsia" };
-              default:
-                return {};
-            }
-          }}
-        />
-        <MetaInfo alt="Déguisement" icon="detective" content={disguise} />
-        <MetaInfo alt="Home Sweet Home" icon="map pin" content={home} />
+        {nickname ? (
+          <Card.Content>
+            <span className="date">A.K.A. {nickname}</span>
+          </Card.Content>
+        ) : null}
+        <Feed>
+          <MetaInfo
+            alt="Home Type"
+            icon="home"
+            content={`${
+              hometype === "Appart/Studio/Chambre ( bref , seul(e) )"
+                ? "Solo"
+                : hometype
+            }${
+              homename &&
+              !(
+                homename === "nop" ||
+                homename === "nope" ||
+                homename === "Nope" ||
+                homename === "Non." ||
+                homename === "Non"
+              )
+                ? ` (${homename})`
+                : ""
+            }`}
+          />
+          <MetaInfo alt="Devise" icon="comment" content={devise} />
+          <MetaInfo alt="Boisson préférée" icon="cocktail" content={drink} />
+          <MetaInfo
+            alt="Etudes précédentes"
+            icon="graduation"
+            content={studiesfrom}
+          />
+          <MetaInfo
+            alt="Niveau d'entrée à l'UTC"
+            icon="pencil"
+            content={studiesto}
+          />
+          <MetaInfo alt="Branche visée" icon="space shuttle" content={branch} />
+          <MetaInfo
+            alt="Clan"
+            icon="group"
+            content={clan}
+            styleFunc={clan => {
+              console.log("Clan", clan);
+              switch (clan) {
+                case "KB":
+                  return { color: "red" };
+                case "VB":
+                  return { color: "green" };
+                case "You²":
+                  return { color: "blue" };
+                case "Tampi":
+                  return { color: "orange" };
+                case "Licorne ? (Attention faut assumer)":
+                  return { color: "fuchsia" };
+                default:
+                  return {};
+              }
+            }}
+          />
+          <MetaInfo alt="Déguisement" icon="detective" content={disguise} />
+          <MetaInfo alt="Home Sweet Home" icon="map pin" content={home} />
+        </Feed>
       </Card.Content>
     </Card>
   );

@@ -1,15 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { CardMeta, Icon } from "semantic-ui-react";
+import { Feed } from "semantic-ui-react";
 
 export default function MetaInfo({ content, icon, alt, styleFunc }) {
   return content ? (
-    <CardMeta>
-      <a alt={alt} href="#/" style={styleFunc(content)}>
-        <Icon name={icon} />
-        <span style={{ marginLeft: "1rem" }}>{content}</span>
-      </a>
-    </CardMeta>
+    <Feed.Event style={styleFunc(content)}>
+      <Feed.Label icon={icon} style={{ alignSelf: "center" }} />
+      <Feed.Content
+        summary={alt}
+        extraText={content}
+        style={styleFunc(content)}
+      />
+    </Feed.Event>
   ) : null;
 }
 
