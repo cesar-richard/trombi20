@@ -572,7 +572,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Lasseau ( alors est ce que c'est lasso mal écrit ????? )",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "Résidence St Lazare"
+    homename: "Résidence St Lazare",
+    photoLinked: "20200627_193928 - Bastien Bastien.jpg"
   },
   {
     id: "6",
@@ -593,7 +594,9 @@ export default [
     clan: "Licorne ? (Attention faut assumer)",
     disguise: "Cercle ",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: ""
+    homename: "",
+    photoLinked:
+      "F0D7D870-CD8A-40F6-AD95-400895D57D65 - Camille De Ponthaud.jpeg"
   },
   {
     id: "8",
@@ -614,7 +617,8 @@ export default [
     clan: "KB",
     disguise: "fusée gonflable",
     hometype: "Coloc",
-    homename: ""
+    homename: "",
+    photoLinked: ""
   },
   {
     id: "9",
@@ -635,7 +639,8 @@ export default [
     clan: "You²",
     disguise: "UTBM (sérieux ?)",
     hometype: "Coloc",
-    homename: "Pas encore de nom ?????"
+    homename: "Pas encore de nom ?????",
+    photoLinked: "mwa4 - Eve Maillard.jpg"
   },
   {
     id: "10",
@@ -655,7 +660,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Chris les opticiens",
     hometype: "",
-    homename: ""
+    homename: "",
+    photoLinked: ""
   },
   {
     id: "19",
@@ -663,12 +669,10 @@ export default [
     mail: "mael.belval@etu.utc.fr",
     firstname: "Maël",
     lastname: "Belval",
-    nickname: "Maraiste",
+    nickname: "Maraiste (VIEUX GROS CON)",
     hobby: "Le houblon.",
     drink: "Cidre Friels",
     devise: "Veni, vidi, et multa bibi.",
-    photo:
-      "https://drive.google.com/u/0/open?usp=forms_web&id=119B_-AnN5IyJh0S2smvqd5SDJV2KcbEh",
     studiesfrom: "J'ai un bac + 2/3 (DUT, License ou whatever)",
     home: "Le picasso",
     studiesto: "Branche",
@@ -676,7 +680,8 @@ export default [
     clan: "Licorne ? (Attention faut assumer)",
     disguise: "Pilier de bar",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "OUI"
+    homename: "OUI",
+    photoLinked: "creepy_cesar - Maël Belval.png"
   },
   {
     id: "21",
@@ -696,7 +701,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Yo-Yo...",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "Non"
+    homename: "Non",
+    photoLinked: ""
   },
   {
     id: "23",
@@ -717,7 +723,8 @@ export default [
     clan: "VB",
     disguise: "Calculatrice",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "Non"
+    homename: "Non",
+    photoLinked: "photo Matthieu PERRETTE - Matthieu Perrette.jpg"
   },
   {
     id: "26",
@@ -738,7 +745,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Le porte manteau",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: ""
+    homename: "",
+    photoLinked: "IMG_20200716_182150 - Morgane Omnes.jpg"
   },
   {
     id: "31",
@@ -759,6 +767,7 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Cage à oiseau",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "La ruche"
+    homename: "La ruche",
+    photoLinked: "9EDA87D8-68BC-4A5E-B62D-24B53F728226 - truffe 62.jpeg"
   }
 ];
