@@ -20,10 +20,9 @@ export default function MainMenu({ searchCallback }) {
         })
         .map(x => {
           return {
-            title:
-              `${x.firstname} ${x.lastname}` + x.nickname
-                ? ` (${x.nickname})`
-                : "",
+            title: `${x.firstname} ${x.lastname}`.concat(
+              x.nickname ? ` (${x.nickname})` : ""
+            ),
             description: x.clan,
             image: `${process.env.PUBLIC_URL}/img/${
               x.photoLinked ? x.photoLinked : "Dorade.png"
@@ -34,7 +33,7 @@ export default function MainMenu({ searchCallback }) {
   };
 
   return (
-    <Menu attached="top" stackable>
+    <Menu attached="top" stackable style={{ marginBottom: "1em" }}>
       <Menu.Item>
         <img alt="Trombi" src={`${process.env.PUBLIC_URL}/favicon.png`} />
       </Menu.Item>
@@ -54,7 +53,7 @@ export default function MainMenu({ searchCallback }) {
       >
         Remplir le formulaire
       </Menu.Item>
-      <Menu.Menu position="right">
+      <Menu.Menu position="right" style={{ alignItems: "center" }}>
         <Search
           fluid
           onResultSelect={(e, { result }) => {
