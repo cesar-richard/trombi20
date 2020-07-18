@@ -664,26 +664,6 @@ export default [
     photoLinked: ""
   },
   {
-    id: "19",
-    created_at: "2020-07-16 06:55:11",
-    mail: "mael.belval@etu.utc.fr",
-    firstname: "Maël",
-    lastname: "Belval",
-    nickname: "Maraiste (VIEUX GROS CON)",
-    hobby: "Le houblon.",
-    drink: "Cidre Friels",
-    devise: "Veni, vidi, et multa bibi.",
-    studiesfrom: "J'ai un bac + 2/3 (DUT, License ou whatever)",
-    home: "Le picasso",
-    studiesto: "Branche",
-    branch: "GI ( <3 )",
-    clan: "Licorne ? (Attention faut assumer)",
-    disguise: "Pilier de bar",
-    hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "OUI",
-    photoLinked: "creepy_cesar - Maël Belval.png"
-  },
-  {
     id: "21",
     created_at: "2020-07-16 06:12:19",
     mail: "maetzn@gmail.com",
