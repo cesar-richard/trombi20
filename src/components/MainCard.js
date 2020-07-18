@@ -21,7 +21,7 @@ export default function MainCard({
   home
 }) {
   return (
-    <Card>
+    <Card centered>
       <Card.Header
         style={{
           width: "auto",
