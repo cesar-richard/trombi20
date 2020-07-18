@@ -32,9 +32,9 @@ export default [
     studiesto: "TC",
     branch: "GI ( <3 )",
     clan: "Licorne ? (Attention faut assumer)",
-    disguise: "",
-    hometype: "",
-    homename: "",
+    disguise: "La Trinité-sur-Mer",
+    hometype: "Résidence",
+    homename: "La Ruche",
     photoLinked: "20200712_161433 - Alexia Rolland.jpg"
   },
   {
