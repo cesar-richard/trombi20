@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Search } from "semantic-ui-react";
 import dataDump from "../datadump";
 
-export default function MainMenu() {
+export default function MainMenu({ searchCallback }) {
   const [activeItem, setActiveItem] = React.useState("home");
   const handleItemClick = (e, { name }) => setActiveItem(name);
   const [searchValue, setSearchValue] = React.useState("");
@@ -10,17 +10,21 @@ export default function MainMenu() {
 
   const handleSearchChange = (e, { value }) => {
     setSearchValue(value);
+    searchCallback(value);
     setResults(
       dataDump
         .filter(x => {
-          return `${x.mail} ${x.firstname} ${x.lastname} ${x.nickname} ${x.studiesfrom} ${x.studiesto} ${x.hometype} ${x.homename}`.includes(
+          return `${x.mail}${x.firstname}${x.lastname}${x.nickname}${x.studiesfrom}${x.studiesto}${x.hometype}${x.homename}`.includes(
             value
           );
         })
         .map(x => {
           return {
-            title: `${x.firstname} ${x.lastname}`,
-            description: x.nickname,
+            title:
+              `${x.firstname} ${x.lastname}` + x.nickname
+                ? ` (${x.nickname})`
+                : "",
+            description: x.clan,
             image: `${process.env.PUBLIC_URL}/img/${
               x.photoLinked ? x.photoLinked : "Dorade.png"
             }`
@@ -53,7 +57,10 @@ export default function MainMenu() {
       <Menu.Menu position="right">
         <Search
           fluid
-          onResultSelect={(e, { result }) => setSearchValue(`${result.title}`)}
+          onResultSelect={(e, { result }) => {
+            setSearchValue(result.title);
+            searchCallback(result.title);
+          }}
           onSearchChange={handleSearchChange}
           results={results}
           value={searchValue}

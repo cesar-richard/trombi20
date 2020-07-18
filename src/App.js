@@ -6,12 +6,18 @@ import "./App.css";
 import datas from "./datadump";
 
 function App() {
+  const [searchValue, setSearchValue] = React.useState("");
   return (
     <>
       <Container>
-        <MainMenu />
+        <MainMenu searchCallback={setSearchValue} />
         <CardGroup stackable>
           {datas
+            .filter(x => {
+              return `${x.clan} ${x.branch} ${x.mail} ${x.firstname} ${x.lastname} ${x.nickname} ${x.studiesfrom} ${x.studiesto} ${x.hometype} ${x.homename}`.includes(
+                searchValue
+              );
+            })
             .sort((a, b) => {
               if (a.firstname < b.firstname) {
                 return -1;
