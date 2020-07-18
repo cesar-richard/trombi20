@@ -10,27 +10,37 @@ function App() {
     <>
       <Container>
         <MainMenu />
-        <CardGroup stackable style={{}}>
-          {datas.map(d => (
-            <MainCard
-              key={d.mail}
-              mail={d.mail}
-              firstname={d.firstname}
-              lastname={d.lastname}
-              nickname={d.nickname}
-              photoLinked={d.photoLinked}
-              hometype={d.hometype}
-              homename={d.homename}
-              devise={d.devise}
-              drink={d.drink}
-              studiesfrom={d.studiesfrom}
-              studiesto={d.studiesto}
-              branch={d.branch}
-              clan={d.clan}
-              disguise={d.disguise}
-              home={d.home}
-            />
-          ))}
+        <CardGroup stackable>
+          {datas
+            .sort((a, b) => {
+              if (a.firstname < b.firstname) {
+                return -1;
+              }
+              if (a.firstname > b.firstname) {
+                return 1;
+              }
+              return 0;
+            })
+            .map(d => (
+              <MainCard
+                key={d.mail}
+                mail={d.mail}
+                firstname={d.firstname}
+                lastname={d.lastname}
+                nickname={d.nickname}
+                photoLinked={d.photoLinked}
+                hometype={d.hometype}
+                homename={d.homename}
+                devise={d.devise}
+                drink={d.drink}
+                studiesfrom={d.studiesfrom}
+                studiesto={d.studiesto}
+                branch={d.branch}
+                clan={d.clan}
+                disguise={d.disguise}
+                home={d.home}
+              />
+            ))}
         </CardGroup>
       </Container>
     </>
