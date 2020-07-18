@@ -1,6 +1,7 @@
 import React from "react";
 import { Menu, Search } from "semantic-ui-react";
 import dataDump from "../datadump";
+import constants from "../constants";
 
 export default function MainMenu({ searchCallback }) {
   const [activeItem, setActiveItem] = React.useState("home");
@@ -48,7 +49,7 @@ export default function MainMenu({ searchCallback }) {
         name="form"
         active={activeItem === "form"}
         link
-        href="https://forms.gle/TReCpKNaa1e54MNc9"
+        href={constants.formUrl}
         target="_blank"
       >
         Remplir le formulaire
