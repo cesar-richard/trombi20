@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Feed } from "semantic-ui-react";
 
 export default function MetaInfo({ content, icon, alt, styleFunc }) {
-  return content ? (
+  return content && content !== "N/C" ? (
     <Feed.Event style={styleFunc(content)}>
       <Feed.Label
         icon={icon}
