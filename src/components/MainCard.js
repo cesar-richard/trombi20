@@ -18,10 +18,15 @@ export default function MainCard({
   clan,
   disguise,
   homename,
-  home
+  home,
+  oldFag
 }) {
   return (
-    <Card centered>
+    <Card
+      centered
+      color={oldFag ? "purple" : false}
+      style={oldFag ? { backgroundColor: "lightgrey" } : {}}
+    >
       <Card.Header
         style={{
           width: "auto",
@@ -44,7 +49,9 @@ export default function MainCard({
         />
       </Card.Header>
       <Card.Content>
-        <Card.Header>{`${firstname} ${lastname}`}</Card.Header>
+        <Card.Header>{`${firstname} ${lastname}${
+          oldFag ? " (VIEUX DEBRIS)" : ""
+        }`}</Card.Header>
         {nickname ? (
           <Card.Content>
             <span className="date">A.K.A. {nickname}</span>

@@ -45,6 +45,7 @@ function App() {
                 clan={d.clan}
                 disguise={d.disguise}
                 home={d.home}
+                oldFag={d.oldFag}
               />
             ))}
         </CardGroup>
