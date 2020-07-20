@@ -3,9 +3,12 @@ import { Menu, Search } from "semantic-ui-react";
 import dataDump from "../datadump";
 import constants from "../constants";
 
-export default function MainMenu({ searchCallback }) {
+export default function MainMenu({ searchCallback, menuClickCallback }) {
   const [activeItem, setActiveItem] = React.useState("home");
-  const handleItemClick = (e, { name }) => setActiveItem(name);
+  const handleItemClick = (e, { name }) => {
+    setActiveItem(name);
+    menuClickCallback(name);
+  };
   const [searchValue, setSearchValue] = React.useState("");
   const [results, setResults] = React.useState([]);
 
@@ -48,11 +51,12 @@ export default function MainMenu({ searchCallback }) {
       <Menu.Item
         name="form"
         active={activeItem === "form"}
-        link
-        href={constants.formUrl}
-        target="_blank"
+        onClick={handleItemClick}
       >
-        Remplir le formulaire
+        /Remplir le formulaire WIP/
+      </Menu.Item>
+      <Menu.Item name="form" link href={constants.formUrl} target="_blank">
+        Remplir sur gform
       </Menu.Item>
       <Menu.Menu position="right" style={{ alignItems: "center" }}>
         <Search

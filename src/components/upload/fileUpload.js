@@ -3,6 +3,56 @@ import constants from "../../constants";
 import { FileManager, FileUploader } from "reactjs-file-uploader";
 
 export default function FileUpload() {
+  const styles = {
+    containerStyle: {
+      border: "thin solid rgb(221, 221, 221)",
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center"
+    },
+    controlsStyle: {
+      padding: 25,
+      backgroundColor: "whitesmoke",
+      textAlign: "center"
+    },
+    controlStyle: {
+      margin: 10
+    },
+    fileStyle: {
+      width: "100%",
+      height: "100%",
+      border: "thin solid #eee",
+      borderRadius: 10,
+      overflow: "hidden",
+      cursor: "pointer"
+    },
+    wrapperStyle: {
+      position: "relative"
+    },
+
+    buttonStyle: {
+      position: "absolute",
+      width: 44,
+      height: 44,
+      right: 16,
+      bottom: 16
+    },
+
+    progressStyle: {
+      position: "absolute",
+      width: 52,
+      height: 52,
+      bottom: 12,
+      right: 12,
+      zIndex: 1,
+      color: "white"
+    },
+
+    eventContainer: {
+      padding: 25,
+      backgroundColor: "whitesmoke"
+    }
+  };
   const [files, setFiles] = React.useState([]);
   const uploadFile = file => {
     return (
