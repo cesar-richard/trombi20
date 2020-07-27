@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Menu, Search } from "semantic-ui-react";
 import dataDump from "../datadump";
 import constants from "../constants";
@@ -48,13 +49,15 @@ export default function MainMenu({ searchCallback, menuClickCallback }) {
       >
         Trombinoscope
       </Menu.Item>
-      <Menu.Item
+      {/*
+        <Menu.Item
         name="form"
         active={activeItem === "form"}
         onClick={handleItemClick}
       >
-        /Remplir le formulaire WIP/
+        Remplir le formulaire WIP
       </Menu.Item>
+    */}
       <Menu.Item name="form" link href={constants.formUrl} target="_blank">
         Remplir sur gform
       </Menu.Item>
@@ -73,3 +76,13 @@ export default function MainMenu({ searchCallback, menuClickCallback }) {
     </Menu>
   );
 }
+
+MainMenu.propTypes = {
+  searchCallback: PropTypes.func.isRequired,
+  menuClickCallback: PropTypes.func.isRequired
+};
+
+MainMenu.defaultProps = {
+  searchCallback: () => {},
+  menuClickCallback: () => {}
+};

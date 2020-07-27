@@ -24,7 +24,7 @@ export default function MainCard({
   return (
     <Card
       centered
-      color={oldFag ? "purple" : false}
+      color={oldFag ? "purple" : "black"}
       style={oldFag ? { backgroundColor: "lightgrey" } : {}}
     >
       <Card.Header

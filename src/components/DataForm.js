@@ -4,9 +4,9 @@ import { Form } from "semantic-ui-react";
 import FileUpload from "./upload/fileUpload";
 
 export default function DataForm() {
-  const options = {};
+  const options = [];
   const [value, setValue] = React.useState("");
-  const handleChange = () => {};
+  const handleChange = (e, v) => setValue(v.value);
   return (
     <>
       <Form>

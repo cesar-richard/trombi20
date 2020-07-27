@@ -4,8 +4,7 @@ import { CardGroup } from "semantic-ui-react";
 import MainCard from "./MainCard";
 import datas from "./../datadump";
 
-export default function Trombinoscope({ value }) {
-  const [searchValue, setSearchValue] = React.useState("");
+export default function Trombinoscope({ searchValue }) {
   return (
     <CardGroup stackable>
       {datas
@@ -48,6 +47,6 @@ export default function Trombinoscope({ value }) {
   );
 }
 
-Trombinoscope.propTypes = {};
+Trombinoscope.propTypes = { searchValue: PropTypes.string.isRequired };
 
-Trombinoscope.defaultProps = {};
+Trombinoscope.defaultProps = { searchValue: "" };
