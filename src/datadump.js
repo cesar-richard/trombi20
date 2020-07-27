@@ -944,7 +944,8 @@ export default [
     clan: "VB",
     disguise: "Batterie",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "Résidence l'Impératrice"
+    homename: "Résidence l'Impératrice",
+    photoLinked: "IMG_20200718_202347313 - Emmie Cassard.jpg"
   },
   {
     created_at: "2020/07/21 1:50:57 PM UTC+2",
@@ -967,7 +968,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Jsp non plus😂",
     hometype: "Je sais toujours pas mais sûrement coloc",
-    homename: "Jasmin je crois mais pas sûre pas sûre "
+    homename: "Jasmin je crois mais pas sûre pas sûre ",
+    photoLinked: "IMG_20200702_102925_207 - Louise Cazuguel.jpg"
   },
   {
     created_at: "2020/07/21 4:53:44 PM UTC+2",
@@ -987,7 +989,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Cellule Procaryote",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: null
+    homename: null,
+    photoLinked: "unnamed - Juliette SACLEUX.jpg"
   },
   {
     created_at: "2020/07/21 7:03:02 PM UTC+2",
@@ -1009,7 +1012,8 @@ export default [
     disguise:
       "Cowboy ( au début je trouvais ça pas très original mais vu que ce qu'ont les autres je m'en sors pas trop mal :)",
     hometype: "studio mais au même endroit d'autres studios d'UTCéen.nes",
-    homename: "aucune idée"
+    homename: "aucune idée",
+    photoLinked: "P1080186 - Alexandre Paris.JPG"
   },
   {
     created_at: "2020/07/24 1:01:37 PM UTC+2",
@@ -1030,7 +1034,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "euh",
     hometype: "Coloc",
-    homename: "Gardénia"
+    homename: "Gardénia",
+    photoLinked: "Screenshot_20200714-095956 - Nesrine SERRADJ.png"
   },
   {
     created_at: "2020/07/24 1:02:54 PM UTC+2",
@@ -1050,7 +1055,9 @@ export default [
     clan: "Tampi",
     disguise: "Shrek",
     hometype: "Coloc",
-    homename: "La TNT ( la coloc la plus chaude et explosive de compi quoi )"
+    homename: "La TNT ( la coloc la plus chaude et explosive de compi quoi )",
+    photoLinked: "",
+    oldFag: true
   },
   {
     created_at: "2020/07/24 1:16:27 PM UTC+2",
@@ -1070,7 +1077,8 @@ export default [
     disguise: "Im Batman",
     hometype:
       "Des cartons sous un pont ça passe nan? En vrai, je sais pas rip.",
-    homename: null
+    homename: null,
+    photoLinked: ""
   },
   {
     created_at: "2020/07/24 9:26:04 PM UTC+2",
@@ -1092,7 +1100,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: '"Le peti chaperon rouge" (jolie faute de frappe)',
     hometype: "Résidence",
-    homename: "Roberval"
+    homename: "Roberval",
+    photoLinked: "Dark Dozo 3 crop jpg - Louis Laurent.jpg"
   },
   {
     created_at: "2020/07/24 10:32:18 PM UTC+2",
@@ -1112,7 +1121,8 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Paypal",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: null
+    homename: null,
+    photoLinked: "20200724_221519 - Antonin.jpg"
   },
   {
     created_at: "2020/07/24 11:58:20 PM UTC+2",
@@ -1132,7 +1142,8 @@ export default [
     clan: "Tampi",
     disguise: "Kayak",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
-    homename: "Faudrais que je mémorise l'adresse"
+    homename: "Faudrais que je mémorise l'adresse",
+    photoLinked: "Snapchat-914204464 - Julie LATIL.jpg
   },
   {
     created_at: "2020/07/26 6:52:07 PM UTC+2",
@@ -1152,7 +1163,8 @@ export default [
     clan: "KB",
     disguise: "Joker ",
     hometype: "Coloc",
-    homename: null
+    homename: null,
+    photoLinked: "inbound643906985136326736 - Adrien B.jpg"
   },
   {
     created_at: "2020/07/26 7:35:18 PM UTC+2",
@@ -1172,6 +1184,7 @@ export default [
     clan: "JSP je t'ai dis ! On a le time",
     disguise: "Labello (??)",
     hometype: "Résidence",
-    homename: "Ruche"
+    homename: "Ruche",
+    photoLinked: ""
   }
 ];
