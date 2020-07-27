@@ -1143,7 +1143,7 @@ export default [
     disguise: "Kayak",
     hometype: "Appart/Studio/Chambre ( bref , seul(e) )",
     homename: "Faudrais que je mémorise l'adresse",
-    photoLinked: "Snapchat-914204464 - Julie LATIL.jpg
+    photoLinked: "Snapchat-914204464 - Julie LATIL.jpg"
   },
   {
     created_at: "2020/07/26 6:52:07 PM UTC+2",
