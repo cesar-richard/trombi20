@@ -9,23 +9,38 @@ export default function DataForm() {
     "volontier !",
     "sans (contre?)facons."
   ];
-  const [branchValue, setBranchValue] = React.useState(null);
-  const [studiesFromValue, setStudiesFromValue] = React.useState(null);
-  const [studiesToValue, setStudiesToValue] = React.useState(null);
-  const [clan, setClan] = React.useState(null);
-  const [hometype, setHometype] = React.useState(null);
+  const [formState, setFormState] = React.useState({
+    mail: "",
+    firstname: "",
+    lastname: "",
+    nickname: "",
+    hobby: "",
+    drink: "",
+    devise: "",
+    photo: "",
+    studiesfrom: "",
+    home: "",
+    studiesto: "",
+    branch: "",
+    clan: "",
+    disguise: "",
+    hometype: "",
+    homename: ""
+  });
 
-  const handleStudiesFromChange = (e, v) => setStudiesFromValue(v.value);
-  const handleStudiesToChange = (e, v) => setStudiesToValue(v.value);
-  const handleBranchChange = (e, v) => setBranchValue(v.value);
-  const handleClanChange = (e, v) => setClan(v.value);
-  const handleHometypeChange = (e, v) => setHometype(v.value);
+  const handleChange = (e, { name, value }) => {
+    setFormState({ [name]: value }, ...formState);
+  };
 
   return (
-    //mail,firstname,lastname,nickname,hobby,drink,devise,photo,studiesfrom,home,studiesto,branch,clan,disguise,hometype,homename
     <Form>
       <Form.Group widths="equal">
-        <Form.Input fluid label="Mail" placeholder="licorne@utc.fr" />
+        <Form.Input
+          fluid
+          label="Mail"
+          placeholder="licorne@utc.fr"
+          onChange={handleChange}
+        />
         <Form.Input fluid label="Prénom" placeholder="First name" />
         <Form.Input fluid label="Nom" placeholder="Last name" />
         <Form.Input fluid label="Un surnom ?" placeholder="Surnom" />
@@ -46,31 +61,32 @@ export default function DataForm() {
         <Form.Radio
           label="Je viens d'avoir le bac"
           value="Je viens d'avoir le bac"
-          checked={studiesFromValue === "Je viens d'avoir le bac"}
-          onChange={handleStudiesFromChange}
+          checked={formState["studiesFrom"] === "Je viens d'avoir le bac"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="J'ai un bac + 2/3 (DUT, License ou whatever)"
           value="J'ai un bac + 2/3 (DUT, License ou whatever)"
           checked={
-            studiesFromValue === "J'ai un bac + 2/3 (DUT, License ou whatever)"
+            formState["studiesFrom"] ===
+            "J'ai un bac + 2/3 (DUT, License ou whatever)"
           }
-          onChange={handleStudiesFromChange}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Je me réoriente (Ouai en fait la vie à Compy me faisait de l'oeil tmtc)"
           value="Je me réoriente (Ouai en fait la vie à Compy me faisait de l'oeil tmtc)"
           checked={
-            studiesFromValue ===
+            formState["studiesFrom"] ===
             "Je me réoriente (Ouai en fait la vie à Compy me faisait de l'oeil tmtc)"
           }
-          onChange={handleStudiesFromChange}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Autre ?"
           value="autre"
-          checked={studiesFromValue === "autre"}
-          onChange={handleStudiesFromChange}
+          checked={formState["studiesFrom"] === "autre"}
+          onChange={handleChange}
         />
         <Form.TextArea placeholder="Bah ouai raconte ! :)" />
       </Form.Group>
@@ -85,38 +101,38 @@ export default function DataForm() {
         <Form.Radio
           label="TC"
           value="TC"
-          checked={studiesToValue === "TC"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "TC"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Hutech"
           value="Hutech"
-          checked={studiesToValue === "Hutech"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "Hutech"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Branche"
           value="Branche"
-          checked={studiesToValue === "Branche"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "Branche"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Master"
           value="Master"
-          checked={studiesToValue === "Master"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "Master"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Doctorat"
           value="Doctorat"
-          checked={studiesToValue === "Doctorat"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "Doctorat"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Autre ?"
           value="autre"
-          checked={studiesToValue === "autre"}
-          onChange={handleStudiesToChange}
+          checked={formState["studiesTo"] === "autre"}
+          onChange={handleChange}
         />
         <Form.Input placeholder="srx ?" />
       </Form.Group>
@@ -126,38 +142,38 @@ export default function DataForm() {
         <Form.Radio
           label="GI"
           value="GI"
-          checked={branchValue === "GI"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "GI"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="GÜ"
           value="GÜ"
-          checked={branchValue === "GÜ"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "GÜ"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="IM"
           value="IM"
-          checked={branchValue === "IM"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "IM"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="GB"
           value="GB"
-          checked={branchValue === "GB"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "GB"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="GP"
           value="GP"
-          checked={branchValue === "GP"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "GP"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Nope frêre on verra ^^"
           value="Nope frêre on verra ^^"
-          checked={branchValue === "Nope frêre on verra ^^"}
-          onChange={handleBranchChange}
+          checked={formState["branch"] === "Nope frêre on verra ^^"}
+          onChange={handleChange}
         />
       </Form.Group>
 
@@ -166,32 +182,32 @@ export default function DataForm() {
         <Form.Radio
           label="Klarfbinn"
           value="Klarfbinn"
-          checked={clan === "Klarfbinn"}
-          onChange={handleClanChange}
+          checked={formState["clan"] === "Klarfbinn"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Tampilaguul"
           value="Tampilaguul"
-          checked={clan === "Tampilaguul"}
-          onChange={handleClanChange}
+          checked={formState["clan"] === "Tampilaguul"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Varelbor"
           value="Varelbor"
-          checked={clan === "Varelbor"}
-          onChange={handleClanChange}
+          checked={formState["clan"] === "Varelbor"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Youarille"
           value="Youarille"
-          checked={clan === "Youarille"}
-          onChange={handleClanChange}
+          checked={formState["clan"] === "Youarille"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="J'ai dit JSP frr ^^"
           value="J'ai dit JSP frr ^^"
-          checked={clan === "J'ai dit JSP frr ^^"}
-          onChange={handleClanChange}
+          checked={formState["clan"] === "J'ai dit JSP frr ^^"}
+          onChange={handleChange}
         />
       </Form.Group>
       <Form.Input fluid label="T'as eu quoi comme déguisement ?" />
@@ -200,26 +216,28 @@ export default function DataForm() {
         <Form.Radio
           label="Appart/Studio/Chambre ( bref , seul(e) )"
           value="Appart/Studio/Chambre ( bref , seul(e) )"
-          checked={hometype === "Appart/Studio/Chambre ( bref , seul(e) )"}
-          onChange={handleHometypeChange}
+          checked={
+            formState["hometype"] === "Appart/Studio/Chambre ( bref , seul(e) )"
+          }
+          onChange={handleChange}
         />
         <Form.Radio
           label="Résidence"
           value="Résidence"
-          checked={hometype === "Résidence"}
-          onChange={handleHometypeChange}
+          checked={formState["hometype"] === "Résidence"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Coloc"
           value="Coloc"
-          checked={hometype === "Coloc"}
-          onChange={handleHometypeChange}
+          checked={formState["hometype"] === "Coloc"}
+          onChange={handleChange}
         />
         <Form.Radio
           label="Autre ?"
           value="autre"
-          checked={hometype === "autre"}
-          onChange={handleHometypeChange}
+          checked={formState["hometype"] === "autre"}
+          onChange={handleChange}
         />
         <Form.Input placeholder="T'habites où du coup ?" />
       </Form.Group>
