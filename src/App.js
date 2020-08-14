@@ -6,7 +6,7 @@ import Trombinoscope from "./components/Trombinoscope";
 import "./App.css";
 
 function App() {
-  const [activePage, setActivePage] = React.useState("home");
+  const [activePage, setActivePage] = React.useState("form");
   const [searchValue, setSearchValue] = React.useState("");
   return (
     <>
