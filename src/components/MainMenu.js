@@ -5,11 +5,6 @@ import dataDump from "../datadump";
 import constants from "../constants";
 
 export default function MainMenu({ searchCallback, menuClickCallback }) {
-  const [activeItem, setActiveItem] = React.useState("home");
-  const handleItemClick = (e, { name }) => {
-    setActiveItem(name);
-    menuClickCallback(name);
-  };
   const [searchValue, setSearchValue] = React.useState("");
   const [results, setResults] = React.useState([]);
 
@@ -42,22 +37,12 @@ export default function MainMenu({ searchCallback, menuClickCallback }) {
       <Menu.Item>
         <img alt="Trombi" src={`${process.env.PUBLIC_URL}/favicon.png`} />
       </Menu.Item>
-      <Menu.Item
-        name="home"
-        active={activeItem === "home"}
-        onClick={handleItemClick}
-      >
+      <Menu.Item name="home" href="/">
         Trombinoscope
       </Menu.Item>
-      {/*
-        <Menu.Item
-        name="form"
-        active={activeItem === "form"}
-        onClick={handleItemClick}
-      >
+      {/*<Menu.Item name="form" href="/new">
         Remplir le formulaire WIP
-      </Menu.Item>
-    */}
+      </Menu.Item>*/}
       <Menu.Item name="form" link href={constants.formUrl} target="_blank">
         Remplir sur gform
       </Menu.Item>
@@ -83,6 +68,5 @@ MainMenu.propTypes = {
 };
 
 MainMenu.defaultProps = {
-  searchCallback: () => {},
-  menuClickCallback: () => {}
+  searchCallback: () => {}
 };
