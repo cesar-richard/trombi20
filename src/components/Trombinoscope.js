@@ -3,8 +3,22 @@ import PropTypes from "prop-types";
 import { CardGroup } from "semantic-ui-react";
 import MainCard from "./MainCard";
 import datas from "./../datadump";
+import { getAll } from "../helpers/api";
+import { useHistory } from "react-router";
 
 export default function Trombinoscope({ searchValue }) {
+  const history = useHistory();
+  React.useEffect(() => {
+    getAll()
+      .then(d => {})
+      .catch(err => {
+        console.error("cesar", err.response);
+        if (err.response.status === 401 || err.response.status === 502) {
+          history.push(`${process.env.PUBLIC_URL}/logout`);
+        }
+      });
+  });
+
   return (
     <CardGroup stackable>
       {datas

@@ -4,7 +4,11 @@ import { Menu, Search } from "semantic-ui-react";
 import dataDump from "../datadump";
 import constants from "../constants";
 
-export default function MainMenu({ searchCallback, menuClickCallback }) {
+export default function MainMenu({
+  searchCallback,
+  menuClickCallback,
+  hasSearchbar
+}) {
   const [searchValue, setSearchValue] = React.useState("");
   const [results, setResults] = React.useState([]);
 
@@ -46,27 +50,32 @@ export default function MainMenu({ searchCallback, menuClickCallback }) {
       <Menu.Item name="form" link href={constants.formUrl} target="_blank">
         Remplir sur gform
       </Menu.Item>
-      <Menu.Menu position="right" style={{ alignItems: "center" }}>
-        <Search
-          fluid
-          onResultSelect={(e, { result }) => {
-            setSearchValue(result.title);
-            searchCallback(result.title);
-          }}
-          onSearchChange={handleSearchChange}
-          results={results}
-          value={searchValue}
-        />
-      </Menu.Menu>
+      {/*<Menu.Item>{JSON.parse(localStorage.bestyearuser).displayName}</Menu.Item>*/}
+      {hasSearchbar && (
+        <Menu.Menu position="right" style={{ alignItems: "center" }}>
+          <Search
+            fluid
+            onResultSelect={(e, { result }) => {
+              setSearchValue(result.title);
+              searchCallback(result.title);
+            }}
+            onSearchChange={handleSearchChange}
+            results={results}
+            value={searchValue}
+          />
+        </Menu.Menu>
+      )}
     </Menu>
   );
 }
 
 MainMenu.propTypes = {
   searchCallback: PropTypes.func.isRequired,
-  menuClickCallback: PropTypes.func.isRequired
+  hasSearchbar: PropTypes.bool.isRequired,
+  menuClickCallback: PropTypes.func
 };
 
 MainMenu.defaultProps = {
-  searchCallback: () => {}
+  searchCallback: () => {},
+  hasSearchbar: false
 };

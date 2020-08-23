@@ -125,15 +125,15 @@ MainCard.propTypes = {
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
   photoLinked: PropTypes.string.isRequired,
-  nickname: PropTypes.string.isRequired,
-  devise: PropTypes.string.isRequired,
+  nickname: PropTypes.string,
+  devise: PropTypes.string,
   hometype: PropTypes.string.isRequired,
   home: PropTypes.string.isRequired,
-  homename: PropTypes.string.isRequired,
-  drink: PropTypes.string.isRequired,
+  homename: PropTypes.string,
+  drink: PropTypes.string,
   studiesfrom: PropTypes.string.isRequired,
   studiesto: PropTypes.string.isRequired,
   branch: PropTypes.string.isRequired,
   clan: PropTypes.string.isRequired,
-  disguise: PropTypes.string.isRequired
+  disguise: PropTypes.string
 };

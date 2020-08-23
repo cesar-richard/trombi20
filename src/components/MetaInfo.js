@@ -19,7 +19,7 @@ export default function MetaInfo({ content, icon, alt, styleFunc }) {
 
 MetaInfo.propTypes = {
   alt: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.string,
   icon: PropTypes.string.isRequired,
   styleFunc: PropTypes.func
 };
